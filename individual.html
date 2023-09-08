@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/leaderboard.css">
+  </head>
+  <body>
+    <div class="container-wrap">
+        <section id="leaderboard">
+            <nav class="ladder-nav">
+                <div class="ladder-title">
+                <h1><font style="color: #4285f4;">G</font><font style="color: #ea4335;">C</font><font style="color: #f9ab00;">S</font><font style="color: #34a853;">J</font><span style="color: #000000;"> Leaderboard</span></h1>
+                </div>
+                <div class="ladder-search">
+                    <input type="text" id="search-leaderboard" class="live-search-box" placeholder="Search Group, Player... " />
+                    <span id="clear-search" class="clear-icon">&times;</span>
+                </div>
+            </nav>
+            <table id="rankings" class="leaderboard-results">
+                <thead>
+                    <tr class="rankings-header">
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Group</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script src="index.js"></script>
+  </body>
+</html>
