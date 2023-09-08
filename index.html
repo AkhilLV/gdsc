@@ -137,13 +137,16 @@
           image2.src = 'assets/img/icons/Banner Red S.jpg';
           image3.src = 'assets/img/icons/Banner Blue S.jpg';
           image4.src = 'assets/img/icons/Banner Green S.jpg';
-          document.getElementById('hero-m').classList.add('p-2');
+          var heroM = document.getElementById('hero-m');
+          if (heroM.classList.contains('p-5')) {
+              heroM.classList.remove('p-5');
+          };
         } else {
           image1.src = 'assets/img/icons/Banner Yellow L.jpg';
           image2.src = 'assets/img/icons/Banner Red L.jpg';
           image3.src = 'assets/img/icons/Banner Blue L.jpg';
           image4.src = 'assets/img/icons/Banner Green L.jpg';
-          document.getElementById('hero-m').classList.remove('p-2');
+          document.getElementById('hero-m').classList.add('p-5');
         }
       }
 
