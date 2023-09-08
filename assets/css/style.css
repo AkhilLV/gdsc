@@ -15,12 +15,18 @@ body {
 }
 
 a {
-  color: #2487ce;
+  color: #4285f4;
   text-decoration: none;
 }
 
+hr {
+  margin: auto;
+  width: 80%;
+  color: grey;
+}
+
 a:hover {
-  color: #469fdf;
+  color: #4285f4;
   text-decoration: none;
 }
 
@@ -43,7 +49,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #2487ce;
+  background: #4285f4;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -159,6 +165,14 @@ h6 {
 /**
 * Desktop Navigation 
 */
+
+.container {
+  background-image: url('mine.jpg');
+  min-height: 5px;
+  background-repeat: repeat-y;
+}
+
+
 .navbar {
   padding: 0;
 }
@@ -182,7 +196,7 @@ h6 {
   justify-content: space-between;
   padding: 10px 0 10px 30px;
   font-size: 14px;
-  color: #16507b;
+  color: black;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -248,7 +262,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #2487ce;
+  color: #4285f4;
 }
 
 .navbar .dropdown:hover>ul {
@@ -284,7 +298,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #124265;
+  color: #4285f4;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -392,11 +406,147 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
+/* h1 {
+  margin-top: 50px;
+  margin-left: 200px;
+  font-size: 60px;
+  font-family: 'Karla', sans-serif;
+  font-weight: lighter;
+} */
+
+.slider-frame {
+  overflow: hidden;
+  height: 800px;
+  width: 1200px;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-right: 1000px;
+}
+
+/*---------- SLIDE ANIMATION --------------*/
+
+
+@keyframes slide_animation {
+  0% {
+    left: 0px;
+  }
+
+  10% {
+    left: 0px;
+  }
+
+  20% {
+    left: 1200px;
+  }
+
+  30% {
+    left: 1200px;
+  }
+
+  40% {
+    left: 2400px;
+  }
+
+  50% {
+    left: 2400px;
+  }
+
+  60% {
+    left: 1200px;
+  }
+
+  70% {
+    left: 1200px;
+  }
+
+  80% {
+    left: 0px;
+  }
+
+  90% {
+    left: 0px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+@-webkit-keyframes slide_animation {
+  0% {
+    left: 0px;
+  }
+
+  10% {
+    left: 0px;
+  }
+
+  20% {
+    left: 1200px;
+  }
+
+  30% {
+    left: 1200px;
+  }
+
+  40% {
+    left: 2400px;
+  }
+
+  50% {
+    left: 2400px;
+  }
+
+  60% {
+    left: 1200px;
+  }
+
+  70% {
+    left: 1200px;
+  }
+
+  80% {
+    left: 0px;
+  }
+
+  90% {
+    left: 0px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+.slide-images {
+  width: 2600px;
+  height: 800px;
+  margin: 0 0 0 -2400px;
+  position: relative;
+  -webkit-animation-name: slide_animation;
+  animation-name: slide_animation;
+  -webkit-animation-duration: 33s;
+  animation-duration: 33s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.img-container {
+  height: 800px;
+  width: 1500px;
+  position: relative;
+  float: left;
+}
+
 #hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
-  background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
   position: relative;
 }
@@ -445,7 +595,7 @@ h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #3194db;
+  color: blue;
 }
 
 #hero .icon-boxes {
@@ -504,16 +654,7 @@ h6 {
   }
 }
 
-@media (max-height: 800px) {
-  #hero {
-    height: auto;
-  }
-}
-
 @media (max-width: 992px) {
-  #hero {
-    height: auto;
-  }
 
   #hero h1 {
     font-size: 28px;
@@ -523,6 +664,13 @@ h6 {
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    max-width: 90%;
+    vertical-align: left;
   }
 }
 
@@ -1577,14 +1725,15 @@ section {
   color: #217bbc;
 }
 
-.contact .info .email,
-.contact .info .phone {
+.contact .info .phone,
+.contact .info .whatsapp {
   margin-top: 40px;
 }
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
-.contact .info .phone:hover i {
+.contact .info .phone:hover i,
+.contact .info .whatsapp:hover i {
   background: #2487ce;
   color: #fff;
 }
@@ -1893,4 +2042,94 @@ section {
   background: #3194db;
   color: #fff;
   text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+.testimonials .testimonials-carousel,
+.testimonials .testimonials-slider {
+  overflow: hidden;
+}
+
+.testimonials .testimonial-item {
+  box-sizing: content-box;
+  min-height: 320px;
+}
+
+.testimonials .testimonial-item .testimonial-img {
+  width: 90px;
+  border-radius: 50%;
+  margin: -40px 0 0 40px;
+  position: relative;
+  z-index: 2;
+  border: 6px solid #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials .testimonial-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 45px;
+  color: #2c4964;
+}
+
+.testimonials .testimonial-item h4 {
+  font-size: 14px;
+  color: #999;
+  margin: 0 0 0 45px;
+}
+
+.testimonials .testimonial-item .quote-icon-left,
+.testimonials .testimonial-item .quote-icon-right {
+  color: #b1a9fc;
+  font-size: 26px;
+}
+
+.testimonials .testimonial-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+
+.testimonials .testimonial-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+}
+
+.testimonials .testimonial-item p {
+  font-style: italic;
+  margin: 0 15px 0 15px;
+  padding: 20px 20px 60px 20px;
+  background: #ffffff;
+  position: relative;
+  border-radius: 6px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.testimonials .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #2487ce;
+  opacity: 1;
+  border: #ffffff;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #5fb7f6;
+}
+
+@media (max-width: 767px) {
+  .testimonials {
+    margin: 30px 10px;
+  }
 }

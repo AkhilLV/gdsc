@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .slide-images {
+            top: 0;
+            left: -max-content;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slide-images.active {
+            left: 0;
+        }
+
+        .slide-images.slide-out {
+            transform: translateX(1380px);
+        }
+
+        .slide-images:nth-child(2) {
+            animation-delay: 10s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="imageContainer" class="flex flex-col p-8">
+        <img id="colorImage" src="assets/img/icons/Banner Yellow L.jpg" alt="Color Image" class="slide-images">
+    </div>
+
+    <script>
+        const images = ['assets/img/icons/Banner Yellow L.jpg', 'assets/img/icons/Banner Green L.jpg', 'assets/img/icons/Banner Red L.jpg', 'assets/img/icons/Banner Blue L.jpg'];
+        let currentIndex = 0;
+
+        function slideImages() {
+            const imageContainer = document.getElementById('imageContainer');
+            const colorImage = document.getElementById('colorImage');
+
+            colorImage.src = images[currentIndex];
+            colorImage.classList.add('active');
+
+            setTimeout(() => {
+                colorImage.classList.add('slide-out');
+            }, 3000);
+
+            setTimeout(() => {
+                colorImage.classList.remove('active', 'slide-out');
+                currentIndex = (currentIndex + 1) % images.length;
+                slideImages();
+            }, 4000);
+        }
+
+        slideImages();
+    </script>
+</body>
+
+</html>
