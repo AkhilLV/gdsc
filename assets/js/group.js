@@ -4,15 +4,16 @@ const payload = {
 
 const JSONpayload = JSON.stringify(payload)
 
-const urlLeaderboard = 'https://shy-fawn-fatigues.cyclic.app/leaderboard';
-const individualData = []
+const urlGroup = 'https://shy-fawn-fatigues.cyclic.app/group-scores';
+const groupData = []
+
 
 const rankingsBody = document.querySelector("#rankings > tbody");
 
 function loadRankings () {
     const request = new XMLHttpRequest();
 
-    request.open("post", urlLeaderboard);
+    request.open("post", urlGroup);
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
     const requestBody = JSON.stringify(payload);
@@ -23,7 +24,7 @@ function loadRankings () {
             console.log(json);
             populateRankings(json);
         } catch (e) {
-            console.warn("Could not load Player Rankings! :(", e);
+            console.warn("Could not load Group Rankings! :(", e);
         }
     };
 
@@ -35,7 +36,7 @@ function populateRankings(json) {
     json.forEach((player, playerIndex) => {
         const tr = document.createElement("tr");
 
-        const properties = ['index', 'name', 'email', 'group', 'score'];
+        const properties = ['index', 'group', 'score'];
 
         properties.forEach((property, propertyIndex) => {
             const td = document.createElement("td");
