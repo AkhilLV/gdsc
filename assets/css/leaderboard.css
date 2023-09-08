@@ -44,6 +44,7 @@ input[type="text"] {
 @media (max-width: 700px) {
   .ladder-nav {
     flex-direction: column;
+    border: none;
   }
 }
 
@@ -56,9 +57,17 @@ input[type="text"] {
   display: flex;
   align-items: center;
 }
-.ladder-title h3{
+
+@media (max-width: 700px) {
+  .ladder-nav .ladder-title {
+    margin-bottom: 20px;
+  }
+}
+
+.ladder-title h3 {
   margin-bottom: 0px !important;
 }
+
 .ladder-nav .ladder-search {
   flex: 1;
   padding-right: 25px;
@@ -67,6 +76,10 @@ input[type="text"] {
 
 .ladder-nav .ladder-search input {
   color: #747474;
+}
+
+.ladder-nav a {
+  margin-top: 15px;
 }
 
 .clear-icon {
@@ -89,7 +102,7 @@ input[type="text"] {
   overflow-x: auto;
 }
 
-.t-head{
+.t-head {
   width: 100%;
   box-sizing: border-box;
 }
