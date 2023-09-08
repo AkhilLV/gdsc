@@ -44,8 +44,8 @@ function populateRankings(json) {
             const td = document.createElement("td");
             if (property === 'index') {
                 td.textContent = playerIndex + 1;
-            } else {
-                td.textContent = player[property];
+            }else{
+                td.textContent = (player[property] !== undefined && player[property] !== null) ? player[property] : '-';
             }
             tr.appendChild(td);
         });
