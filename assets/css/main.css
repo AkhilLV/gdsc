@@ -81,10 +81,10 @@
 .tz-gallery .lightbox:after {
   position: absolute;
   left: 0;
-  width: 100%;
+  width: auto;
   height: 100%;
   opacity: 0;
-  background-color: rgba(46, 132, 206, 0.7);
+  background-color: transparent;
   content: '';
   transition: 0.4s;
 }
